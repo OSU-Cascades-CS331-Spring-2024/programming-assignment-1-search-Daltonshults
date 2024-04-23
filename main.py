@@ -92,7 +92,8 @@ def main():
         city_to_coordinates_map = mg.get_city_to_coordinates_map(node_list)
         
         cm = CountryMap(node_list)
-        agent = Agent(None, None, None, cm, AgentActions)
+        aa = AgentActions()
+        agent = Agent(None, None, None, cm, aa)
 
 
         # Breadth-First Search ---------------------------------------------------------------------
@@ -174,7 +175,7 @@ def main():
             agent.set_goal_city(cities[1])
             agent.set_start_city(cities[0])
             
-            ucs_final_node = ucs.uniform_cost_search(cities[0], cities[1])
+            ucs_final_node = agent.search()
             ucs_final_nodes.append(ucs_final_node)
 
             cost = ucs_final_node.get_path_cost()

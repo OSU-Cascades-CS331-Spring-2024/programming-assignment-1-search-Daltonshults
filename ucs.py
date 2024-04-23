@@ -14,7 +14,7 @@ class UniformCostSearch:
     def get_search_metrics(self):
         return self.search_metrics
 
-    def expand(self, current_node, city_to_weight_map):
+    def expand(self, current_node, city_to_weight_map, actions):
 
         nodes = []
 
@@ -29,7 +29,7 @@ class UniformCostSearch:
 
             new_node = CityNode(state=s_prime,
                                 parent = current_node,
-                                action="Reached",
+                                action=actions.expanded(),
                                 path_cost=cost)
 
             
@@ -39,11 +39,11 @@ class UniformCostSearch:
         return nodes
 
 
-    def uniform_cost_search(self, initial, goal):
+    def uniform_cost_search(self, initial, goal, actions):
         # Set initial node
         node = CityNode(state = initial,
                         parent = None,
-                        action = "Initial",
+                        action = actions.initial(),
                         path_cost = 0)
         
         
@@ -67,14 +67,15 @@ class UniformCostSearch:
                 return node
             
             # for each child of the current node EXPAND do
-            for child in self.expand(node, self.city_to_weight_map):
+            for child in self.expand(node, self.city_to_weight_map, actions):
 
                 # s = child.state
                 s = child.get_state()
 
                 # if s is not in reached or child.PATH-COST < reached[s].PATH-COST then
                 if s not in self.reached or child.get_path_cost() < self.reached[s].get_path_cost():
-                    child.set_action("Explored")
+                    # child.set_action("Explored")
+                    child.set_action(actions.explored())
                     # reached[s] = child
                     self.reached[s] = child
                     # add child to frontier
@@ -85,8 +86,8 @@ class UniformCostSearch:
         # return failure
         return None
     
-    def search(self, initial, goal):
-        return self.uniform_cost_search(initial, goal)
+    def search(self, initial, goal, actions):
+        return self.uniform_cost_search(initial, goal, actions)
     
     def get_explored(self):
         return self.search_metrics.get_explored()
