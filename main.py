@@ -8,6 +8,7 @@ from ucs import UniformCostSearch
 from astar import AStarEuclideanSearch, AStarHaversineSearch
 from agent import Agent
 from agent_actions import AgentActions
+from writer import AverageWriter
 
 class LinePrinter:
     def print_line():
@@ -165,7 +166,7 @@ def main():
         ucs_average_explored = []
         ucs_average_maintained = []
         ucs_average_expanded = []
-        ucs_cost = []
+        ucs_costs = []
 
         for cities in visiting:
             ucs = UniformCostSearch(country_map=cm,
@@ -188,7 +189,7 @@ def main():
             ucs_average_explored.append(ucs.get_explored())
             ucs_average_maintained.append(ucs.get_maintained())
             ucs_average_expanded.append(ucs.get_expanded())
-            ucs_cost.append(cost)
+            ucs_costs.append(cost)
 
 
 
@@ -258,65 +259,32 @@ def main():
             astar_h_average_maintained.append(astar_h.get_maintained())
             astar_h_average_expanded.append(astar_h.get_expanded())
             astar_h_costs.append(cost)
-
-        with open('solutions.txt', 'a') as f:
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-            f.write(f"AVERAGE BFS EXPLORED: {sum(bfs_average_explored) / len(bfs_average_explored)}\n")
-            f.write(f"AVERAGE BFS MAINTAINED: {sum(bfs_average_maintained) / len(bfs_average_maintained)}\n")
-            f.write(f"AVERAGE BFS EXPANDED: {sum(bfs_average_expanded) / len(bfs_average_expanded)}\n")
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-            f.write(f"AVERAGE IDLS EXPLORED: {sum(idls_average_explored) / len(idls_average_explored)}\n")
-            f.write(f"AVERAGE IDLS MAINTAINED: {sum(idls_average_maintained) / len(idls_average_maintained)}\n")
-            f.write(f"AVERAGE IDLS EXPANDED: {sum(idls_average_expanded) / len(idls_average_expanded)}\n")
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-            f.write(f"AVERAGE UCS EXPLORED: {sum(ucs_average_explored) / len(ucs_average_explored)}\n")
-            f.write(f"AVERAGE UCS MAINTAINED: {sum(ucs_average_maintained) / len(ucs_average_maintained)}\n")
-            f.write(f"AVERAGE UCS EXPANDED: {sum(ucs_average_expanded) / len(ucs_average_expanded)}\n")
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-            f.write(f"AVERAGE ASTAR-E EXPLORED: {sum(astar_e_average_explored) / len(astar_e_average_explored)}\n")
-            f.write(f"AVERAGE ASTAR-E MAINTAINED: {sum(astar_e_average_maintained) / len(astar_e_average_maintained)}\n")
-            f.write(f"AVERAGE ASTAR-E EXPANDED: {sum(astar_e_average_expanded) / len(astar_e_average_expanded)}\n")
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-            f.write(f"AVERAGE ASTAR-H EXPLORED: {sum(astar_h_average_explored) / len(astar_h_average_explored)}\n")
-            f.write(f"AVERAGE ASTAR-H MAINTAINED: {sum(astar_h_average_maintained) / len(astar_h_average_maintained)}\n")
-            f.write(f"AVERAGE ASTAR-H EXPANDED: {sum(astar_h_average_expanded) / len(astar_h_average_expanded)}\n")
-            f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-
-            counts = {
-                "bfs": 0,
-                "idls": 0,
-                "ucs": 0,
-                "astar_e": 0,
-                "astar_h": 0
-            }
-
-            for i in range(len(astar_h_costs)):
-                with open('solutions.txt', 'a') as f:
-                    f.write(f"\n\n\n\nastar_h: {astar_h_costs[i]}\n")
-                    f.write(f"astar_e: {astar_e_costs[i]}\n")
-                    f.write(f"bfs: {bfs_costs[i]}\n")
-                    f.write(f"idls: {idls_costs[i]}\n")
-                    f.write(f"ucs: {ucs_cost[i]}\n")
-
-                if astar_h_costs[i] <= bfs_costs[i] and astar_h_costs[i] <= idls_costs[i] and astar_h_costs[i] <= ucs_cost[i] and astar_h_costs[i] <= astar_e_costs[i]:
-                    counts["astar_h"] += 1
-                if astar_e_costs[i] <= bfs_costs[i] and astar_e_costs[i] <= idls_costs[i] and astar_e_costs[i] <= ucs_cost[i] and astar_e_costs[i] <= astar_h_costs[i]:
-                    counts["astar_e"] += 1
-                if bfs_costs[i] <= idls_costs[i] and bfs_costs[i] <= ucs_cost[i] and bfs_costs[i] <= astar_h_costs[i] and bfs_costs[i] <= astar_e_costs[i]:
-                    counts["bfs"] += 1
-                if idls_costs[i] <= ucs_cost[i] and idls_costs[i] <= astar_h_costs[i] and idls_costs[i] <= astar_e_costs[i] and idls_costs[i] <= bfs_costs[i]:
-                    counts["idls"] += 1
-                elif ucs_cost[i] <= astar_h_costs[i] and ucs_cost[i] <= astar_e_costs[i] and ucs_cost[i] <= bfs_costs[i] and ucs_cost[i] <= idls_costs[i]:
-                    counts["ucs"] += 1
-                else:
-                    print("No winner.")
-
-            with open('solutions.txt', 'a') as f:
-                f.write("\n------------------------------------------------------------------------------------------------------------------\n")
-                for i in counts.keys():
-                    f.write(f"{i} was optimal {counts[i]} times.\n")
-
         
+        writer = AverageWriter(
+                bfs_average_explored,
+                idls_average_explored,
+                astar_e_average_explored,
+                astar_h_average_explored,
+                bfs_average_maintained,
+                idls_average_maintained,
+                astar_e_average_maintained,
+                astar_h_average_maintained,
+                bfs_average_expanded,
+                idls_average_expanded,
+                astar_e_average_expanded,
+                astar_h_average_expanded,
+                ucs_average_explored,
+                ucs_average_maintained,
+                ucs_average_expanded,
+                astar_h_costs,
+                astar_e_costs,
+                bfs_costs,
+                idls_costs,
+                ucs_costs)
+        
+
+        writer.print_averages_to_file()
+       
     
     else:
         visiting = [(args.A, args.B)]
@@ -342,7 +310,8 @@ def main():
         city_to_coordinates_map = mg.get_city_to_coordinates_map(node_list)
         
         cm = CountryMap(node_list)
-        agent = Agent(None, None, None, cm, AgentActions)    
+        aa = AgentActions()
+        agent = Agent(None, None, None, cm, aa)    
 
         if algo == "bfs":
             bfs = BreadthFirstSearch(cm)
@@ -380,7 +349,7 @@ def main():
             agent.set_goal_city(goal)
             agent.set_start_city(initial)
 
-            ucs_final_node = ucs.uniform_cost_search(initial, goal)
+            ucs_final_node = ucs.uniform_cost_search(initial, goal, aa)
             if ucs_final_node == None:
                 print("No path found.")
                 return
