@@ -1,0 +1,769 @@
+
+---------------------------------------------
+Algorithm: bfs
+Start City: brest
+Goal City: nice
+Path Cost: 1633
+Explored: 17
+Expanded: 55
+Maintained: 16
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to paris
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to avignon
+Actions: Moved from avignon to marseille
+Actions: Moved from marseille to nice
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: montpellier
+Goal City: calais
+Path Cost: 1224
+Explored: 12
+Expanded: 39
+Maintained: 14
+Actions: Moved from montpellier to toulouse
+Actions: Moved from toulouse to limoges
+Actions: Moved from limoges to paris
+Actions: Moved from paris to calais
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: strasbourg
+Goal City: bordeaux
+Path Cost: 1160
+Explored: 9
+Expanded: 34
+Maintained: 13
+Actions: Moved from strasbourg to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to bordeaux
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: paris
+Goal City: grenoble
+Path Cost: 625
+Explored: 9
+Expanded: 35
+Maintained: 12
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: grenoble
+Goal City: paris
+Path Cost: 918
+Explored: 6
+Expanded: 19
+Maintained: 10
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to paris
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: brest
+Goal City: grenoble
+Path Cost: 1214
+Explored: 12
+Expanded: 42
+Maintained: 12
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to paris
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: grenoble
+Goal City: brest
+Path Cost: 1198
+Explored: 15
+Expanded: 49
+Maintained: 16
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Moved from nantes to rennes
+Actions: Moved from rennes to brest
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: nice
+Goal City: nantes
+Path Cost: 1262
+Explored: 8
+Expanded: 23
+Maintained: 9
+Actions: Moved from nice to marseille
+Actions: Moved from marseille to avignon
+Actions: Moved from avignon to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Goal
+
+---------------------------------------------
+Algorithm: bfs
+Start City: caen
+Goal City: strasbourg
+Path Cost: 989
+Explored: 5
+Expanded: 20
+Maintained: 8
+Actions: Moved from caen to calais
+Actions: Moved from calais to nancy
+Actions: Moved from nancy to strasbourg
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: brest
+Goal City: nice
+Path Cost: 1616
+Explored: 730
+Expanded: 727
+Maintained: 727
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to avignon
+Actions: Moved from avignon to marseille
+Actions: Moved from marseille to nice
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: montpellier
+Goal City: calais
+Path Cost: 1224
+Explored: 50
+Expanded: 52
+Maintained: 52
+Actions: Moved from montpellier to toulouse
+Actions: Moved from toulouse to limoges
+Actions: Moved from limoges to paris
+Actions: Moved from paris to calais
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: strasbourg
+Goal City: bordeaux
+Path Cost: 1123
+Explored: 82
+Expanded: 85
+Maintained: 85
+Actions: Moved from strasbourg to nancy
+Actions: Moved from nancy to paris
+Actions: Moved from paris to limoges
+Actions: Moved from limoges to bordeaux
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: paris
+Goal City: grenoble
+Path Cost: 917
+Explored: 81
+Expanded: 80
+Maintained: 80
+Actions: Moved from paris to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: grenoble
+Goal City: paris
+Path Cost: 621
+Explored: 20
+Expanded: 22
+Maintained: 22
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: brest
+Goal City: grenoble
+Path Cost: 1197
+Explored: 119
+Expanded: 116
+Maintained: 116
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: grenoble
+Goal City: brest
+Path Cost: 1212
+Explored: 150
+Expanded: 156
+Maintained: 156
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Moved from paris to rennes
+Actions: Moved from rennes to brest
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: nice
+Goal City: nantes
+Path Cost: 1262
+Explored: 43
+Expanded: 46
+Maintained: 46
+Actions: Moved from nice to marseille
+Actions: Moved from marseille to avignon
+Actions: Moved from avignon to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Goal
+
+---------------------------------------------
+Algorithm: idls
+Start City: caen
+Goal City: strasbourg
+Path Cost: 897
+Explored: 56
+Expanded: 55
+Maintained: 55
+Actions: Moved from caen to paris
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to strasbourg
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: brest
+Goal City: nice
+Path Cost: 1589
+Explored: 21
+Expanded: 64
+Maintained: 20
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to bordeaux
+Actions: Moved from bordeaux to toulouse
+Actions: Moved from toulouse to montpellier
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to marseille
+Actions: Moved from marseille to nice
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: montpellier
+Goal City: calais
+Path Cost: 1131
+Explored: 17
+Expanded: 52
+Maintained: 19
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Moved from paris to calais
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: strasbourg
+Goal City: bordeaux
+Path Cost: 1123
+Explored: 18
+Expanded: 53
+Maintained: 17
+Actions: Moved from strasbourg to nancy
+Actions: Moved from nancy to paris
+Actions: Moved from paris to limoges
+Actions: Moved from limoges to bordeaux
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: paris
+Goal City: grenoble
+Path Cost: 625
+Explored: 13
+Expanded: 42
+Maintained: 15
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: grenoble
+Goal City: paris
+Path Cost: 621
+Explored: 11
+Expanded: 31
+Maintained: 14
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: brest
+Goal City: grenoble
+Path Cost: 1197
+Explored: 16
+Expanded: 50
+Maintained: 18
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: grenoble
+Goal City: brest
+Path Cost: 1198
+Explored: 20
+Expanded: 62
+Maintained: 19
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Moved from nantes to rennes
+Actions: Moved from rennes to brest
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: nice
+Goal City: nantes
+Path Cost: 1232
+Explored: 15
+Expanded: 47
+Maintained: 18
+Actions: Moved from nice to marseille
+Actions: Moved from marseille to avignon
+Actions: Moved from avignon to montpellier
+Actions: Moved from montpellier to toulouse
+Actions: Moved from toulouse to bordeaux
+Actions: Moved from bordeaux to nantes
+Actions: Goal
+
+---------------------------------------------
+Algorithm: ucs
+Start City: caen
+Goal City: strasbourg
+Path Cost: 759
+Explored: 12
+Expanded: 41
+Maintained: 15
+Actions: Moved from caen to paris
+Actions: Moved from paris to nancy
+Actions: Moved from nancy to strasbourg
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: brest
+Goal City: nice
+Path Cost: 1589
+Explored: 19
+Expanded: 60
+Maintained: 22
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to bordeaux
+Actions: Moved from bordeaux to toulouse
+Actions: Moved from toulouse to montpellier
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to marseille
+Actions: Moved from marseille to nice
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: montpellier
+Goal City: calais
+Path Cost: 1131
+Explored: 7
+Expanded: 23
+Maintained: 15
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Moved from paris to calais
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: strasbourg
+Goal City: bordeaux
+Path Cost: 1123
+Explored: 13
+Expanded: 42
+Maintained: 18
+Actions: Moved from strasbourg to nancy
+Actions: Moved from nancy to paris
+Actions: Moved from paris to limoges
+Actions: Moved from limoges to bordeaux
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: paris
+Goal City: grenoble
+Path Cost: 625
+Explored: 4
+Expanded: 14
+Maintained: 10
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: grenoble
+Goal City: paris
+Path Cost: 621
+Explored: 4
+Expanded: 10
+Maintained: 7
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: brest
+Goal City: grenoble
+Path Cost: 1197
+Explored: 10
+Expanded: 33
+Maintained: 17
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: grenoble
+Goal City: brest
+Path Cost: 1198
+Explored: 6
+Expanded: 18
+Maintained: 11
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Moved from nantes to rennes
+Actions: Moved from rennes to brest
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: nice
+Goal City: nantes
+Path Cost: 1250
+Explored: 8
+Expanded: 21
+Maintained: 11
+Actions: Moved from nice to marseille
+Actions: Moved from marseille to avignon
+Actions: Moved from avignon to montpellier
+Actions: Moved from montpellier to toulouse
+Actions: Moved from toulouse to limoges
+Actions: Moved from limoges to nantes
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_e
+Start City: caen
+Goal City: strasbourg
+Path Cost: 759
+Explored: 4
+Expanded: 13
+Maintained: 7
+Actions: Moved from caen to paris
+Actions: Moved from paris to nancy
+Actions: Moved from nancy to strasbourg
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: brest
+Goal City: nice
+Path Cost: 1589
+Explored: 18
+Expanded: 56
+Maintained: 20
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to bordeaux
+Actions: Moved from bordeaux to toulouse
+Actions: Moved from toulouse to montpellier
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to marseille
+Actions: Moved from marseille to nice
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: montpellier
+Goal City: calais
+Path Cost: 1131
+Explored: 8
+Expanded: 27
+Maintained: 16
+Actions: Moved from montpellier to avignon
+Actions: Moved from avignon to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Moved from paris to calais
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: strasbourg
+Goal City: bordeaux
+Path Cost: 1123
+Explored: 12
+Expanded: 36
+Maintained: 18
+Actions: Moved from strasbourg to nancy
+Actions: Moved from nancy to paris
+Actions: Moved from paris to limoges
+Actions: Moved from limoges to bordeaux
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: paris
+Goal City: grenoble
+Path Cost: 625
+Explored: 6
+Expanded: 22
+Maintained: 13
+Actions: Moved from paris to dijon
+Actions: Moved from dijon to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: grenoble
+Goal City: paris
+Path Cost: 621
+Explored: 4
+Expanded: 10
+Maintained: 7
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to dijon
+Actions: Moved from dijon to paris
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: brest
+Goal City: grenoble
+Path Cost: 1197
+Explored: 11
+Expanded: 36
+Maintained: 16
+Actions: Moved from brest to rennes
+Actions: Moved from rennes to nantes
+Actions: Moved from nantes to limoges
+Actions: Moved from limoges to lyon
+Actions: Moved from lyon to grenoble
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: grenoble
+Goal City: brest
+Path Cost: 1198
+Explored: 9
+Expanded: 32
+Maintained: 16
+Actions: Moved from grenoble to lyon
+Actions: Moved from lyon to limoges
+Actions: Moved from limoges to nantes
+Actions: Moved from nantes to rennes
+Actions: Moved from rennes to brest
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: nice
+Goal City: nantes
+Path Cost: 1250
+Explored: 10
+Expanded: 27
+Maintained: 14
+Actions: Moved from nice to marseille
+Actions: Moved from marseille to avignon
+Actions: Moved from avignon to montpellier
+Actions: Moved from montpellier to toulouse
+Actions: Moved from toulouse to limoges
+Actions: Moved from limoges to nantes
+Actions: Goal
+
+---------------------------------------------
+Algorithm: astar_h
+Start City: caen
+Goal City: strasbourg
+Path Cost: 759
+Explored: 5
+Expanded: 17
+Maintained: 9
+Actions: Moved from caen to paris
+Actions: Moved from paris to nancy
+Actions: Moved from nancy to strasbourg
+Actions: Goal
+
+
+
+
+astar_h: 1589
+astar_e: 1589
+bfs: 1633
+idls: 1616
+ucs: 1589
+
+
+
+
+astar_h: 1131
+astar_e: 1131
+bfs: 1224
+idls: 1224
+ucs: 1131
+
+
+
+
+astar_h: 1123
+astar_e: 1123
+bfs: 1160
+idls: 1123
+ucs: 1123
+
+
+
+
+astar_h: 625
+astar_e: 625
+bfs: 625
+idls: 917
+ucs: 625
+
+
+
+
+astar_h: 621
+astar_e: 621
+bfs: 918
+idls: 621
+ucs: 621
+
+
+
+
+astar_h: 1197
+astar_e: 1197
+bfs: 1214
+idls: 1197
+ucs: 1197
+
+
+
+
+astar_h: 1198
+astar_e: 1198
+bfs: 1198
+idls: 1212
+ucs: 1198
+
+
+
+
+astar_h: 1250
+astar_e: 1250
+bfs: 1262
+idls: 1262
+ucs: 1232
+
+
+
+
+astar_h: 759
+astar_e: 759
+bfs: 989
+idls: 897
+ucs: 759
+
+------------------------------------------------------------------------------------------------------------------
+bfs was optimal 2 times.
+idls was optimal 3 times.
+ucs was optimal 6 times.
+astar_e was optimal 8 times.
+astar_h was optimal 8 times.
+
+------------------------------------------------------------------------------------------------------------------
+AVERAGE BFS EXPLORED: 10.333333333333334
+AVERAGE BFS MAINTAINED: 12.222222222222221
+AVERAGE BFS EXPANDED: 35.111111111111114
+
+------------------------------------------------------------------------------------------------------------------
+AVERAGE IDLS EXPLORED: 147.88888888888889
+AVERAGE IDLS MAINTAINED: 148.77777777777777
+AVERAGE IDLS EXPANDED: 148.77777777777777
+
+------------------------------------------------------------------------------------------------------------------
+AVERAGE UCS EXPLORED: 15.88888888888889
+AVERAGE UCS MAINTAINED: 17.22222222222222
+AVERAGE UCS EXPANDED: 49.111111111111114
+
+------------------------------------------------------------------------------------------------------------------
+AVERAGE ASTAR-E EXPLORED: 8.333333333333334
+AVERAGE ASTAR-E MAINTAINED: 13.11111111111111
+AVERAGE ASTAR-E EXPANDED: 26.0
+
+------------------------------------------------------------------------------------------------------------------
+AVERAGE ASTAR-H EXPLORED: 9.222222222222221
+AVERAGE ASTAR-H MAINTAINED: 14.333333333333334
+AVERAGE ASTAR-H EXPANDED: 29.22222222222222
+
+------------------------------------------------------------------------------------------------------------------

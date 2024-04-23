@@ -1,0 +1,111 @@
+function BREADTH-FIRST-SEARCH(problem) returns a solution node or failure
+    node←NODE(problem.INITIAL)
+    if problem.IS-GOAL(node.STATE) then return node
+    frontier ← a FIFO queue, with node as an element
+    reached←{problem.INITIAL}
+    while not IS-EMPTY(frontier) do
+        node←POP(frontier)
+        for each child in EXPAND(problem, node) do
+            s←child.STATE
+            if problem.IS-GOAL(s) then return child
+        if s is not in reached then
+            add s to reached
+            add child to frontier
+        
+    return failure
+
+function UNIFORM-COST-SEARCH(problem) returns a solution node, or failure
+    return BEST-FIRST-SEARCH(problem, PATH-COST)
+
+function BREADTH-FIRST-SEARCH(problem)
+    // Create the initial node from the initial state of the problem
+    initial_node ← create_node(problem.initial_state)
+
+    // Check if the initial node is the goal state
+    if problem.is_goal(initial_node.state) then
+        return initial_node
+
+    // Initialize the frontier with the initial node
+    frontier ← FIFO queue containing initial_node
+
+    // Create a set to track reached states to avoid revisiting
+    reached ← set containing initial_node.state
+
+    // Loop until the frontier is empty
+    while frontier is not empty do
+        // Remove the node from the front of the queue
+        current_node ← pop(frontier)
+
+        // Generate all successors of the current node
+        for each child_node in expand(problem, current_node) do
+            // Check if any successor's state is the goal state
+            if problem.is_goal(child_node.state) then
+                return child_node
+
+            // If the state has not been reached before, add to frontier and reached set
+            if child_node.state not in reached then
+                add child_node.state to reached
+                add child_node to frontier
+
+    // If no solution is found and the frontier is empty, return failure
+    return failure
+
+
+DEPTH LIMITED SEARCH AND ITERATIVE DEEPENING SEARCH ------------------------------------------------------------------------------------------------------------------------
+
+function ITERATIVE-DEEPENING-SEARCH(problem) returns a solution node or failure
+    for depth = 0 to ∞ do
+    result←DEPTH-LIMITED-SEARCH(problem,depth)
+    if result ̸= cutoff then 
+        return result
+
+function DEPTH-LIMITED-SEARCH(problem, l) returns a node or failure or cutoff
+    frontier←a LIFO queue (stack) with NODE(problem.INITIAL) as an element
+    result ← failure
+
+    while not IS-EMPTY(frontier) do
+        node←POP(frontier)
+    if problem.IS-GOAL(node.STATE) then return node
+    
+    if DEPTH(node) > l then
+        result ← cutoff
+    else if not IS-CYCLE(node) do
+        for each child in EXPAND(problem, node) do add child to frontier
+    
+    return result
+
+
+BEST FIRST SEARCH------------------------------------------------------------------------------------------------------------------------------------------------------------
+function BEST-FIRST-SEARCH(problem, f ) returns a solution node or failure
+    
+    node←NODE(STATE=problem.INITIAL)
+    
+    frontier ← a priority queue ordered by f , with node as an element
+    reached←a lookup table, with one entry with key problem.INITIAL and value node
+    
+    while not IS-EMPTY(frontier) do
+        node←POP(frontier)
+    if problem.IS-GOAL(node.STATE) then return node
+    
+    for each child in EXPAND(problem, node) do
+        s←child.STATE
+        if s is not in reached or child.PATH-COST < reached[s].PATH-COST then
+            reached[s] ← child
+            add child to frontier
+            
+    return failure
+
+function EXPAND(problem,node) yields nodes
+    s←node.STATE
+    for each action in problem.ACTIONS(s) do
+        s′ ←problem.RESULT(s,action)
+        cost←node.PATH-COST + problem.ACTION-COST(s,action,s′)
+        yield NODE(STATE=s′, PARENT=node, ACTION=action, PATH-COST=cost)
+
+function UNIFORM-COST-SEARCH(problem) returns a solution node, or failure
+    return BEST-FIRST-SEARCH(problem, PATH-COST)
+
+NOTES:
+ * evaluation function is the cost of the path from the root to the current node
+ * This is called Di- jkstra’s algorithm by the theoretical computer science community, and uniform-cost search by the AI community
+ * The algorithm can be implemented as a call to BEST-FIRST-SEARCH with PATH-COST as the evaluation function
