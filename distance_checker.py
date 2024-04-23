@@ -34,7 +34,7 @@ class HaversineDistance(DistanceChecker):
 
     def haversine(self, point_1, point_2):
         # Aproximate radius of the earth in kilometers
-        r = 6371
+        r = 1
         lat_1, long_1 = self.decimal_degrees(point_1)
         lat_2, long_2 = self.decimal_degrees(point_2) 
 
@@ -63,7 +63,7 @@ class EuclideanDistance(DistanceChecker):
         y = (abs(lat_1 - lat_2))** 2
         x = (abs(long_1 - long_2))** 2
 
-        total = sqrt(x + y) * 111.2
+        total = sqrt(x + y) #* 111.2
         '''
         One degree of latitude is equal to 25,000/360 
                                           = 69.4 miles 
